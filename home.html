@@ -9,10 +9,16 @@
 <script>
 var xhr=new XMLHttpRequest;
 xhr.open('get','ajax/cate.json',true);
+  xhr.onreadystatechange = function(){
+        if(xmlHttp.readyState == 4){   //判断交互是否成功
+            if(xmlHttp.status == 200){    //获取服务器返回的数据   获取纯文本数据
+                //alert('成功：'+xmlHttp.responseText);
+                console.log(xmlHttp.responseText);
+            }
+        }
+    }
 xhr.send();
-xhr.onload=function(){
-    console.log(JSON.parse(xhr.responseText));
-  }
+
 </script>
 </body>
 </html>
