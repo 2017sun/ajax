@@ -8,7 +8,7 @@
 <body>
 <script>
 var xhr=new XMLHttpRequest;
-xhr.open('get','/cate.json',true);
+xhr.open('get','/ajax/cate.json',true);
   xhr.onreadystatechange = function(){
         if(xhr.readyState == 4){   //判断交互是否成功
             if(xhr.status == 200){    //获取服务器返回的数据   获取纯文本数据
